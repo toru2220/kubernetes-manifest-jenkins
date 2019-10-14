@@ -92,7 +92,7 @@ spec:
      - mountPath: /var/jenkins_home
        name: jenkinsdata
      - mountPath: /var/lib/jenkins/init.groovy.d/init.groovy
-       name: initscritp
+       name: initscript
    env:
      - name: JENKINS_OPTS
        value: --httpPort=8080 --httpsPort=8443 --prefix=/jenkins
