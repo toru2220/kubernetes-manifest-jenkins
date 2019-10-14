@@ -24,6 +24,7 @@ spec:
  ports:
    - name: jenkins-http
      port: 8080
+     nodePort: 30555
    - name: jenkins-https
      port: 8443
      nodePort: 30444
