@@ -26,6 +26,7 @@ spec:
      port: 8080
    - name: jenkins-https
      port: 8443
+     nodePort: 30444
    - name: jenkins-agent
      port: 50000
  selector:
@@ -75,7 +76,7 @@ spec:
      path: /var/jenkins_home
  containers:
  - name: jenkins
-   image: jenkins/jenkins:2.169
+   image: jenkins/jenkins:jdk11
    ports:
      - name: https
        containerPort: 8443
