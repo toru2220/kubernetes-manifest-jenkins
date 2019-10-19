@@ -75,9 +75,6 @@ spec:
  - name: jenkinsdata
    hostPath:
      path: /var/jenkins_home
- - name: initscript
-   hostPath:
-     path: ./init.groovy
  containers:
  - name: jenkins
    image: jenkins/jenkins:jdk11
@@ -91,8 +88,6 @@ spec:
    volumeMounts:
      - mountPath: /var/jenkins_home
        name: jenkinsdata
-     - mountPath: /var/lib/jenkins/init.groovy.d/init.groovy
-       name: initscript
    env:
      - name: JENKINS_OPTS
        value: --httpPort=8080 --httpsPort=8443 --prefix=/jenkins
