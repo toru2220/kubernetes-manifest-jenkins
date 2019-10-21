@@ -1,0 +1,136 @@
+plugins:
+required:
+  jaxb: latest
+  token-macro: latest
+  kubernetes: latest
+  scm-api: latest
+  workflow-cps: latest
+  pipeline-model-extensions: latest
+  pipeline-milestone-step: latest
+  kubernetes-credentials: latest
+  workflow-aggregator: latest
+  subversion: latest
+  gradle: latest
+  ssh-credentials: latest
+  workflow-step-api: latest
+  pipeline-graph-analysis: latest
+  mailer: latest
+  display-url-api: latest
+  github-branch-source: latest
+  workflow-multibranch: latest
+  matrix-auth: latest
+  branch-api: latest
+  credentials: latest
+  docker-commons: latest
+  slack: latest
+  timestamper: latest
+  workflow-api: latest
+  workflow-support: latest
+  build-timeout: latest
+  github: latest
+  plain-credentials: latest
+  matrix-project: latest
+  junit: latest
+  email-ext: latest
+  pipeline-build-step: latest
+  pipeline-model-api: latest
+  cloudbees-folder: latest
+  kubernetes-client-api: latest
+  trilead-api: latest
+  pipeline-model-declarative-agent: latest
+  workflow-basic-steps: latest
+  resource-disposer: latest
+  pipeline-stage-step: latest
+  pam-auth: latest
+  git: latest
+  lockable-resources: latest
+  git-client: latest
+  credentials-binding: latest
+  pipeline-input-step: latest
+  pipeline-model-definition: latest
+  antisamy-markup-formatter: latest
+  script-security: latest
+  ace-editor: latest
+  ant: latest
+  pipeline-github-lib: latest
+  mapdb-api: latest
+  ldap: latest
+  ws-cleanup: latest
+  github-api: latest
+  pipeline-stage-view: latest
+  jdk-tool: latest
+  workflow-scm-step: latest
+  command-launcher: latest
+  jackson2-api: latest
+  configuration-as-code: latest
+  ssh-slaves: latest
+  durable-task: latest
+  structs: latest
+  apache-httpcomponents-client-4-api: latest
+  docker-workflow: latest
+  workflow-cps-global-lib: latest
+  pipeline-stage-tags-metadata: latest
+  bouncycastle-api: latest
+  authentication-tokens: latest
+  momentjs: latest
+  variant: latest
+  workflow-durable-task-step: latest
+  jquery-detached: latest
+  workflow-job: latest
+  handlebars: latest
+  git-server: latest
+  jsch: latest
+  pipeline-rest-api: latest
+credentials:
+  system:
+    domainCredentials:
+    - credentials:
+      - usernamePassword:
+          description: "bitbucket-account"
+          id: "bitbucket"
+          password: "demopass"
+          scope: GLOBAL
+          username: "fuhajin"
+      - string:
+          description: "slack-token"
+          id: "slack-token"
+          scope: GLOBAL
+          secret: "demopass"
+jenkins:
+  clouds:
+  - kubernetes:
+      connectTimeout: 60
+      containerCapStr: "10"
+      jenkinsUrl: "http://192.168.0.60:30555/jenkins"
+      maxRequestsPerHostStr: "32"
+      name: "kubernetes"
+      namespace: "default"
+      readTimeout: 15
+      serverUrl: "https://192.168.0.60:6443"
+      skipTlsVerify: true
+  crumbIssuer:
+    standard:
+      excludeClientIPFromCrumb: false
+  disableRememberMe: false
+  labelString: "master linux"
+  markupFormatter: "plainText"
+  mode: NORMAL
+  myViewsTabBar: "standard"
+  numExecutors: 3
+  primaryView:
+    all:
+      name: "all"
+  projectNamingStrategy: "standard"
+  quietPeriod: 5
+  remotingSecurity:
+    enabled: true
+  scmCheckoutRetryCount: 0
+  slaveAgentPort: 50000
+security:
+unclassified:
+  slackNotifier:
+    botUser: false
+    room: "#general"
+    sendAsText: false
+    teamDomain: "caltago"
+    tokenCredentialId: "slack-token"
