@@ -97,7 +97,7 @@ spec:
      - name: JENKINS_OPTS
        value: --httpPort=8080 --httpsPort=8443 --prefix=/jenkins
      - name: JAVA_OPTS
-       value: -Duser.timezone=Asia/Tokyo
+       value: -Duser.timezone=Asia/Tokyo -Djenkins.install.runSetupWizard=false
      - name: CASC_JENKINS_CONFIG
        value: /config/jenkins.yml
    resources:
